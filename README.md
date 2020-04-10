@@ -6,9 +6,9 @@
     </a>
     <br>
     Efficient solutions to HackerRank SQL problems
-    <br><br><br>
+    <br>
     <a href="https://www.hackerrank.com/chitturiarun">
-        <img height=85 src="https://aruntech.xyz/SQL.JPG">
+        <img height=120 src="https://aruntech.xyz/SQL.JPG">
     </a>
     <br>
 </p>
@@ -24,5 +24,3 @@ TOPICS:
 * [Alternative Queries](https://github.com/Chitturiarunkrishna/HackerrankSQL/tree/master/Alternative%20Queries)
 
 SQL solutions are coded using MySQL
-
-
