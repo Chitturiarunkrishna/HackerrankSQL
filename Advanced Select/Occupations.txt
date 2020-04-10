@@ -1,0 +1,32 @@
+/*To solve this problem, we can use user-defined variables to help create a new table. Take the sample input as example, the table we want to create looks like below:
+
+RowLine    Doctor    Professor    Singer    Actor
+1    NULL    Ashely    NULL    NULL
+2    NULL    Christeen    NULL    NULL
+1    NULL    NULL    NULL    Jane
+1    Jenny    NULL    NULL    NULL
+2    NULL    NULL    NULL    Julia
+3    NULL    Ketty    NULL    NULL
+3    NULL    NULL    NULL    Maria
+1    NULL    NULL    Meera    NULL
+2    NULL    NULL    Priya    NULL
+2    Samantha    NULL    NULL    NULL
+The RowLine represents the line where the name should be put. In addition, because we want to sort names alphabetically for each occupation, the first step of creating the table above is to sort OCCUPATIONS table by name. Let’s call the table t. Once we have got the table t, we can use “SELECT MIN(Doctor), MIN(Professor), MIN(Singer), MIN(Actor) FROM t GROUP BY RowLine” to get the result.
+
+To get table t, user-defined variables and CASE operator can help. We create four variables to record the line number RowLine, one for each occupation. We use CASE to add variables according to occupation.*/
+
+SET @r1=0, @r2=0, @r3 =0, @r4=0;
+SELECT MIN(Doctor), MIN(Professor), MIN(Singer), MIN(Actor) FROM
+(SELECT 
+    CASE Occupation 
+           WHEN 'Doctor' THEN @r1:=@r1+1
+           WHEN 'Professor' THEN @r2:=@r2+1
+           WHEN 'Singer' THEN @r3:=@r3+1
+           WHEN 'Actor' THEN @r4:=@r4+1 
+    END
+    AS RowLine,
+    CASE WHEN Occupation = 'Doctor' THEN Name END AS Doctor,
+    CASE WHEN Occupation = 'Professor' THEN Name END AS Professor,
+    CASE WHEN Occupation = 'Singer' THEN Name END AS Singer,
+    CASE WHEN Occupation = 'Actor' THEN Name END AS Actor
+FROM OCCUPATIONS ORDER BY Name) AS t GROUP BY RowLine;

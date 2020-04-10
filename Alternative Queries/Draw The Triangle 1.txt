@@ -1,0 +1,8 @@
+-- We can use REPEAT function to solve problem. The syntax is REPEAT(str, count), str is the string to repeat and count is how many times it will repeat. And we also need a table with at least 20 rows, then we can apply REPEAT function once for each row. Additionally, we need a variable to represent the length of each line.
+
+-- First, we declare a variable called number and set it to 21:
+-- Then, we choose a table with at least 20 rows and we apply REPEAT function for each row. Also, we use the variable number to record the length of each line. As a result, we need to decrease the number by 1 every time before we apply the REPEAT function:
+
+
+SET @number = 21;
+SELECT REPEAT('* ', @number := @number - 1) FROM information_schema.tables;
