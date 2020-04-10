@@ -6,7 +6,7 @@
     </a>
     <br>
     Efficient solutions to HackerRank SQL problems
-    <br>
+    <br><br><br>
     <a href="https://www.hackerrank.com/chitturiarun">
         <img height=85 src="https://aruntech.xyz/SQL.JPG">
     </a>
