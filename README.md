@@ -15,7 +15,7 @@
 
 This repository consists of all the SQL Solutions as of 10th April 2020
 
-TOPICS:
+<b>TOPICS:</b>
 * [Basic Select](https://github.com/Chitturiarunkrishna/HackerrankSQL/tree/master/Basic%20Select)
 * [Advanced Select](https://github.com/Chitturiarunkrishna/HackerrankSQL/tree/master/Advanced%20Select)
 * [Aggregation](https://github.com/Chitturiarunkrishna/HackerrankSQL/tree/master/Aggregation)
