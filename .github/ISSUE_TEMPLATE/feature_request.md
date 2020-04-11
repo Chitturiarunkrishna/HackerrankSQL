@@ -1,8 +1,8 @@
 ---
 name: Feature request
 about: Suggest an update in answers
-title: ''
-labels: ''
+topic: ''
+question: ''
 assignees: ''
 
 ---
